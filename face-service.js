@@ -12,7 +12,7 @@ app.post('/reconocer', upload.single('imagen'), (req, res) => {
   const identificado = true; // Supongamos que hay coincidencia
 
   if (identificado) {
-    res.json({ status: 'ok', userId: 'cliente123' });
+    res.json({ status: 'ok', userId: 'cliente456' });
   } else {
     res.status(403).json({ error: 'No reconocido' });
   }

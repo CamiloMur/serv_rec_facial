@@ -2,6 +2,7 @@ const express = require('express');
 const multer = require('multer');
 const axios = require('axios');
 const validarToken = require('./utils/tokenValidator');
+const FormData = require('form-data');
 
 const app = express();
 const upload = multer();
@@ -11,21 +12,21 @@ app.post('/auth', validarToken, upload.single('imagen'), async (req, res) => {
     const imagen = req.file;
     if (!imagen) return res.status(400).json({ error: 'Imagen requerida' });
 
-    // Llama al servicio de reconocimiento facial
-    const faceRes = await axios.post('http://localhost:4000/reconocer', {
-      imagen: imagen.buffer.toString('base64')
-    }, {
-      headers: { 'Content-Type': 'application/json' }
+    // Crear form-data para reenviar la imagen como archivo
+    const formData = new FormData();
+    formData.append("imagen", imagen.buffer, imagen.originalname);
+
+    const faceRes = await axios.post("http://localhost:4000/reconocer", formData, {
+      headers: formData.getHeaders()
     });
 
     const { userId } = faceRes.data;
 
-    // Luego llama al backend bancario
-    const bancoRes = await axios.post('http://localhost:5000/autorizar', { userId });
+    const bancoRes = await axios.post("http://localhost:5000/autorizar", { userId });
     res.json(bancoRes.data);
 
   } catch (err) {
-    console.error(err.message);
+    console.error("❌ Error detallado:", err.response?.data || err.message);
     res.status(500).json({ error: 'Error en autenticación' });
   }
 });
