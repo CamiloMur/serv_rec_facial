@@ -9,8 +9,8 @@ const app = express();
 const upload = multer();
 
 // Configura credenciales de Face++ en el futuro (reemplaza estos valores con los reales)
-const API_KEY = '9TSfPhvD0KUZ7ASgDqz1FaOWfodqQ4Fa';
-const API_SECRET = 'RMthrKbXT6LVBvh9ob4AOf3qXlJSB_Gj';
+const API_KEY = 'EatAnZmCcLgWIumyLetYQPVZOllnQLu1';
+const API_SECRET = 'NUnEuPTv5Ph3iEXf60QwUZCoPKp7s0RC';
 const COMPARE_API_URL = 'https://api-us.faceplusplus.com/facepp/v3/compare';
 
 // Objeto de clientes con sus rutas de imagen de referencia

@@ -3,9 +3,15 @@ const multer = require('multer');
 const axios = require('axios');
 const validarToken = require('./utils/tokenValidator');
 const FormData = require('form-data');
+const cors = require('cors');
 
 const app = express();
 const upload = multer();
+
+app.use(cors());
+
+// Resto de tu código, por ejemplo:
+// app.use(express.json());
 
 app.post('/auth', validarToken, upload.single('imagen'), async (req, res) => {
   try {

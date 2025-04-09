@@ -14,12 +14,12 @@
 <body>
   <div class="login-container_2">
     <h2>Inserta tu imagen para continuar...</h2>
-    <form>
+    <form id="auth-form">
       <div class="imagen">
-        <input type="file" accept="image/*" name="imagen" required /><br><br><br>
+        <input type="file" accept="image/*" name="imagen" id="imagen" required /><br><br><br>
       </div>
       <div class="registro">
-        <button href="perfil_cliente.html"  class="login-btn" type="submit">Accede a tu cuenta</button>
+        <button class="login-btn" type="submit">Accede a tu cuenta</button>
       </div>
       <div class="registro">
         <button class="login-btn" type="button"onclick="window.location.href='Login.html'">Regresar</button>
@@ -42,5 +42,6 @@
       }
     }
   </script>
+  <script src="../integracion/app.js"></script>
 </body>
 </html>
