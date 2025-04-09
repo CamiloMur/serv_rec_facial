@@ -3,7 +3,7 @@ const app = express();
 
 app.use(express.json());
 
-// Simulamos una pequeña base de datos
+// backend-banco.js
 const usuarios = {
   cliente456: {
     nombre: "Ana Gómez",
@@ -29,7 +29,6 @@ app.post('/autorizar', (req, res) => {
   }
 
   const usuario = usuarios[userId];
-
   res.json({
     acceso: "autorizado",
     usuario: {
