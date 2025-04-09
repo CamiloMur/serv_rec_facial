@@ -1,0 +1,155 @@
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background-image: url('concierto-nw.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(45, 45, 161);
+}
+
+    .login-container {
+      background-color: rgb(255, 255, 255);
+      padding: 55px 25px;
+      border-radius: 0px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      width: 550px;
+      height: 600px;
+      font-family: "Montserrat", sans-serif;
+      text-align: center;
+      border: 1px solid #9EF01A;
+    }
+
+    .login-container_2 {
+      background-color: rgb(255, 255, 255);
+      padding: 55px 25px;
+      border-radius: 0px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      width: 550px;
+      height: 400px;
+      font-family: "Montserrat", sans-serif;
+      text-align: center;
+      border: 1px solid #9EF01A;
+    }
+    .login-container h2 {
+    
+      margin-bottom: 40px;
+      color: #000000;
+    }
+
+    .login-container .texto-verde {
+      font-family: "Montserrat", sans-serif;
+      margin-bottom: 20px;
+      color: #000000;
+    }
+    
+
+    .login-container .texto-naranja {
+      font-family: "Montserrat", sans-serif;
+      margin-bottom: 20px;
+      color: #3700ff;
+    }
+
+    .registro {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px; /* espacio entre los textos */
+      margin-top: 10px;
+    } 
+    .registro3 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px; /* espacio entre los textos */
+      margin-top: 170px;
+    } 
+
+    .form-group {
+      margin-bottom: 25px;
+      color: #000000;
+      
+    }
+    .form-group [type="text"]{
+    font-family: "Montserrat", sans-serif;
+    }
+    .form-group [type="password"]{
+    font-family: "Montserrat", sans-serif;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 25px;
+      text-align: left;
+      margin-left: 15%;
+    }
+
+    .form-group input {
+
+      width: 275px;
+      height: 48px;
+      width: 70%;
+      padding: 25px;
+      border-radius: 8px;
+      border: 1px solid  rgb(45, 45, 161);
+      background-color: transparent;
+      
+    }
+
+    .login-btn {
+      width: 50%;
+      padding: 18px;
+      background-color:  rgb(45, 45, 161);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: "Montserrat", sans-serif;
+    }
+    .login-btn3 {
+      width: 50%;
+      padding: 10px;
+      background-color:  rgb(45, 45, 161);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: "Montserrat", sans-serif;
+    }
+    .login-btn:hover {
+      background-color:#f0701a;;
+    }
+    .login-btn3:hover {
+      background-color:#f0701a;;
+    }
+
+    /*faceid*/
+    img {
+      margin-top: 0px; /* Mueve hacia abajo */
+      /* o */
+      margin-bottom: 20px; /* Mueve hacia arriba el contenido que está debajo */
+      width:"40";
+      height:"40";
+    }
+    .icono-subida {
+      width: 60px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .icono-subida:hover {
+      transform: scale(1.1);
+    }
+
+    #input-imagen {
+      display: none; /* Ocultamos el input real */
+    }

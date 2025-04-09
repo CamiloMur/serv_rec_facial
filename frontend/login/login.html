@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Underline:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Underline:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles_login.css">
+</head>
+
+<body>
+  <div class="login-container">
+    <h2>Bienvenido(a) a tu Banca Móvil</h2>
+    <form>
+      <div class="form-group">
+        <label for="username">Usuario</label>
+        <input type="text" id="username" placeholder="Ingresa tu usuario" name="username" required/>
+      </div>
+      <div class="form-group">
+        <label for="password">PIN</label>
+        <input type="password" id="password" placeholder="Ingresa tu PIN" name="password" required />
+      </div>
+      <div class="registro">
+        <span class="texto-verde">Accede con</span>
+          <a href=insertar_imagen.html class="texto-naranja">Face ID</a>
+          <a href="insertar_imagen.html">
+            <img src="Iconos/icono_face_id.png" alt="Face ID" class="icono-subida">
+          </a>
+              <!-- Input oculto para cargar imagen -->
+            <input type="file" id="input-imagen" accept="image/*" onchange="handleImage(event)">
+            <div id="preview"></div>
+      </div>
+      <button class="login-btn" type="submit">Accede a tu cuenta</button>
+      
+     
+    </form>
+    <div class="registro">
+        <span class="texto-verde">¿No tienes una cuenta?</span>
+        <a href="registro.html" class="texto-naranja">Regístrate</a>
+      </div>
+  </div>
+  <script>
+    function handleImage(event) {
+      const archivo = event.target.files[0];
+      if (archivo) {
+        const preview = document.getElementById('preview');
+        const img = document.createElement('img');
+        img.src = URL.createObjectURL(archivo);
+        img.style.width = '150px';
+        img.style.marginTop = '10px';
+        preview.innerHTML = ''; // Limpia anterior
+        preview.appendChild(img);
+      }
+    }
+  </script>
+</body>
+</html>
