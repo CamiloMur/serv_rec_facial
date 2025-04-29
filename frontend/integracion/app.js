@@ -16,16 +16,16 @@ document.getElementById('auth-form').addEventListener('submit', function(e) {
     })
     .then(response => response.json())
     .then(data => {
-        console.log("Mi data: ",data);
-        if (data.acceso === "autorizado") {
+        console.log("Mi data: ",data.data.acceso);
+        if (data.data.acceso === "autorizado") {
             // Guardamos la respuesta en sessionStorage (o localStorage)
             sessionStorage.setItem('infoUsuario', JSON.stringify(data));
             // Redirigimos a la página donde se mostrará la info
             window.location.href = '../login/perfil_cliente.html';
-          } else {
-            // Manejo de error si el usuario no está autorizado
-            alert('Error: ' + (data.error || 'No autorizado'));
-          }
+        } else {
+          // Manejo de error si el usuario no está autorizado
+          alert('Error: ' + (data.error || 'No autorizado'));
+        }
     })
     .catch(error => console.error('Error:', error));
   });

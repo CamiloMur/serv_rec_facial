@@ -12,9 +12,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const data = JSON.parse(dataStr);
   
     // Asignar valores en la página
-    document.getElementById('nombreCliente').textContent = data.usuario.nombre;
-    document.getElementById('idCliente').textContent = data.usuario.id;
-    document.getElementById('tipoCuenta').textContent = data.usuario.tipoCuenta;
-    document.getElementById('saldoCliente').textContent = data.usuario.saldo;
+    document.getElementById('nombreCliente').textContent = data.data.usuario.nombre;
+    document.getElementById('idCliente').textContent = data.data.usuario.id;
+    document.getElementById('tipoCuenta').textContent = data.data.usuario.tipoCuenta;
+    document.getElementById('saldoCliente').textContent = data.data.usuario.saldo;
   });
   
